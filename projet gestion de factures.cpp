@@ -323,7 +323,7 @@ int testes_si_client_existe(vector<Client> client , int identifiant)
 	}
 	return -1 ;
 }
-// nvl // Teste si un produit existe
+// Teste si un produit existe
 int produitexiste(vector<Produit> produit ,int id)
 {
 	for(int i=0;i<produit.size();++i)
@@ -353,7 +353,7 @@ void ajouter_fact_tableau(vector<Facture> tf , Facture f)
 {
 	tf.push_back(f);
 }
-// 4e  afficher les infos des fact du tableau 
+// afficher les infos des fact du tableau 
 void affiche_les_fact_tab(vector<Facture> tf)
 {
 	for(int i=0;i<tf.size();++i)
@@ -363,7 +363,7 @@ void affiche_les_fact_tab(vector<Facture> tf)
 	if(tf.size() == 0)
 	cout << " Ya pas de facture aujourd'hui "<< endl ;
 }
-// 4f  afficher les clients qui ont passe des factures sans paiment 
+// afficher les clients qui ont passe des factures sans paiment 
 void affiche_fact_sans_paiment(vector<Facture> tf)
 {
 	for(int i=0;i<tf.size();++i)
@@ -372,13 +372,13 @@ void affiche_fact_sans_paiment(vector<Facture> tf)
 		tf[i].getClient().afficheClient();
 	}
 }
-// 4g  modifier la quantite d'un produit dans une facture 
+// modifier la quantite d'un produit dans une facture 
 void modifier_quantite_facture(Facture tf , Produit p)
 {
 	tf.modifierunproduit(p);
 }
 
-// 4i  afficher les informations des facture qui one ete passe aujourd'hui
+// afficher les informations des facture qui one ete passe aujourd'hui
 void affichfactaujourdhui(vector<Facture> tf)
 {
 	int *date;
@@ -393,7 +393,7 @@ void affichfactaujourdhui(vector<Facture> tf)
 	if(tf.size() == 0)
 	cout << " Ya pas de facture aujourd'hui "<< endl ;
 }
-// 4j  supprimer une facture d'un tableau
+// supprimer une facture d'un tableau
 void supprimmerfacture(vector<Facture> &tf, int code)
 {
 	for(int i=0;i<tf.size();++i)
@@ -407,7 +407,7 @@ void supprimmerfacture(vector<Facture> &tf, int code)
 	}
 	
 }
-// nvl // affiche les produit 
+// affiche les produit 
 void affichelesproduit(vector<Produit> produit)
 {
 	for(int i=0;i<produit.size();++i)
@@ -441,7 +441,7 @@ int identifiantclient()
 	return id ;
 }
 
-// nvl //  rexupere la date actuelle du systeme
+//  rexupere la date actuelle du systeme
 int *curentdte()
 {
 	// Get the current time
@@ -460,7 +460,6 @@ int *curentdte()
     date[2]=year ;
 	return date ;
 }
-
 
 int main()
 {
